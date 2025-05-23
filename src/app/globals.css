@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: dharma-bold;
+  src: url(/DharmaGothicE-Bold.ttf);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
