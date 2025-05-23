@@ -20,7 +20,7 @@ export interface RepoError {
 export async function getRepos(
   username: string
 ): Promise<RepoResponse | RepoError> {
-  let allRepos: Repo[] = [];
+  const allRepos: Repo[] = [];
   let page = 1;
   const perPage = 100;
 

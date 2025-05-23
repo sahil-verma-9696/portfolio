@@ -1,7 +1,14 @@
 import Header from "@/components/layout/Header";
 import Hero from "@/components/layout/Hero";
 import { getRepos } from "@/data/github/repo";
-import { Mail, Github, Linkedin, Code } from "lucide-react";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  SiJavascript,
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiTailwindcss,
+} from "react-icons/si";
 
 export default async function Home() {
   const data = await getRepos("sahil-verma-9696");
@@ -16,29 +23,38 @@ export default async function Home() {
       <Hero />
 
       {/* About Section */}
-      <section id="about" className="mt-16 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
-        <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-          I'm a <span className="font-semibold">Full Stack Web Developer</span> passionate about building modern, scalable web applications. I specialize in React, Node.js, and Tailwind CSS, and have strong experience with MongoDB, Firebase, and Express.
+      <section className="mt-20">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          About Me
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 text-lg">
+          I&apos;m a passionate{" "}
+          <span className="font-semibold">Full Stack Developer</span> with
+          experience in building scalable web applications using the MERN stack.
+          I love solving problems, contributing to open-source projects, and
+          learning new technologies.
         </p>
       </section>
 
       {/* Tech Stack Section */}
-      <section id="techstack" className="mt-16">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Tech Stack</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-800 dark:text-gray-200">
-          {['React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Tailwind CSS', 'JavaScript'].map((tech) => (
-            <div key={tech} className="bg-gray-100 dark:bg-[#181818] p-4 rounded-lg shadow">
-              <Code className="mx-auto mb-2" />
-              {tech}
-            </div>
-          ))}
+      <section className="mt-20">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Tech Stack
+        </h2>
+        <div className="flex flex-wrap gap-6 text-4xl text-gray-800 dark:text-white">
+          <SiJavascript title="JavaScript" />
+          <SiReact title="React.js" />
+          <SiNodedotjs title="Node.js" />
+          <SiMongodb title="MongoDB" />
+          <SiTailwindcss title="Tailwind CSS" />
         </div>
       </section>
 
-       {/* Projects Section */}
-       <section id="projects" className="mt-20">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Projects</h2>
+      {/* Projects Section */}
+      <section className="mt-20">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          Projects
+        </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {data.items.map((repo) => (
             <div
@@ -52,7 +68,8 @@ export default async function Home() {
                 {repo.description || "No description provided."}
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
-                <span className="font-medium">Language:</span> {repo.language || "N/A"}
+                <span className="font-medium">Language:</span>{" "}
+                {repo.language || "N/A"}
               </p>
               {repo.homepage && (
                 <a
@@ -80,20 +97,38 @@ export default async function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="mt-16 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Contact</h2>
+      <section className="mt-20 mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          Contact
+        </h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          Feel free to reach out to me via email or connect with me on social platforms.
+          Feel free to connect with me:
         </p>
-        <div className="flex justify-center gap-6">
-          <a href="mailto:sahils.verma.1000@gmail.com" className="text-gray-700 dark:text-gray-300 hover:underline">
-            <Mail className="inline-block mr-2" /> sahils.verma.1000@gmail.com
+        <div className="flex gap-6 text-2xl text-gray-800 dark:text-white">
+          <a
+            href="mailto:sahils.verma.1000@gmail.com"
+            title="Email"
+            className="hover:text-blue-600 dark:hover:text-blue-400"
+          >
+            <FaEnvelope />
           </a>
-          <a href="https://github.com/sahil-verma-9696" target="_blank" className="text-gray-700 dark:text-gray-300 hover:underline">
-            <Github className="inline-block mr-2" /> GitHub
+          <a
+            href="https://github.com/sahil-verma-9696"
+            title="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-black dark:hover:text-white"
+          >
+            <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/sahil-verma-9696" target="_blank" className="text-gray-700 dark:text-gray-300 hover:underline">
-            <Linkedin className="inline-block mr-2" /> LinkedIn
+          <a
+            href="https://www.linkedin.com/in/sahil-verma-9696"
+            title="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-700 dark:hover:text-blue-400"
+          >
+            <FaLinkedin />
           </a>
         </div>
       </section>
