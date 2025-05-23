@@ -62,7 +62,7 @@ export default async function Home() {
               className="group bg-gray-100 dark:bg-[#181818] hover:bg-gray-200 dark:hover:bg-[#242424] p-6 rounded-xl transition-colors duration-300 shadow-md hover:shadow-lg"
             >
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:underline">
-                {repo.full_name}
+                {repo.name}
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-3 line-clamp-3">
                 {repo.description || "No description provided."}

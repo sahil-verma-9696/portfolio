@@ -21,15 +21,15 @@ export default function Hero() {
       <div>
         <h2 className="text-3xl font-semibold">{GREATING}</h2>
       </div>
-      <div className="flex items-center justify-between">
-        <h1 className="uppercase font-bold text-8xl">{NAME}</h1>
+      <div className="flex items-center justify-between max-sm:flex-col">
+        <h1 className="uppercase font-bold text-8xl">{NAME}</h1> 
         <div className="flex items-center">
           [ <Clock /> ]
-          <span className="inline-block mx-2 h-[.1px] w-50 bg-black dark:bg-white"></span>
-          <span className="text-2xl font-bold">{JOB_TITLE}</span>
+          <span className="inline-block mx-2 h-[.1px] w-50 max-sm:w-7 bg-black dark:bg-white"></span>
+          <span className="text-2xl font-bold max-sm:text-sm text-nowrap italic">{JOB_TITLE}</span>
         </div>
       </div>
-      <div className="overflow-hidden h-63 relative mt-20">
+      <div className="overflow-hidden h-63 relative mt-20 max-sm:hidden">
         <h1
           ref={title}
           className="font-[dharma-bold] text-[21.6rem] absolute -top-29"

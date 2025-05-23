@@ -8,5 +8,5 @@ export default function Clock() {
   setTimeout(() => {
     setTime(new Date().toLocaleTimeString().toUpperCase());
   }, 1000);
-  return <span>{time}</span>;
+  return <span className="max-sm:text-sm">{time}</span>;
 }
