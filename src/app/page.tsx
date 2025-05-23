@@ -23,7 +23,7 @@ export default async function Home() {
       <Hero />
 
       {/* About Section */}
-      <section className="mt-20">
+      <section id="about" className="mt-20">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
           About Me
         </h2>
@@ -51,7 +51,7 @@ export default async function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="mt-20">
+      <section id="projects" className="mt-20">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
           Projects
         </h2>
@@ -97,7 +97,7 @@ export default async function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="mt-20 mb-12">
+      <section id="contact" className="mt-20 mb-12">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
           Contact
         </h2>
